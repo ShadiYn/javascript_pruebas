@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERSION GRADOS</title>
+</head>
+<body>
+    <!--
+    Para los input hay que especificar el type="text"
+    y hay que especificar el id="grados"
+
+    para los dos, grados y farenheit
+    
+                 para llamar a los datos y obtener sus id's: const numero = document.querySelector("#euros").value;
+                    para obtener el resultado en el input:         document.querySelector("button").addEventListener("click",calcularDolares);
+
+    
+    -->
+    <label>Introduce los grados</label>
+    
+    <input type="text" id="grados">
+
+    <label for="farenheit">Faraenheit: </label>
+    <input type="text" id="farenheit">
+    <button>Calcular</button>
+
+
+    <script>
+        const calcularGrados = ()=>{
+            const grados = document.querySelector("#grados").value;
+            document.querySelector("#farenheit").value=grados*9/5+32;
+
+
+
+        }
+
+        document.querySelector("button").addEventListener("click",calcularGrados)
+
+
+
+    </script>
+</body>
+</html>
