@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>costes viaje</title>
+</head>
+<body>
+    <script>
+        const NumNoches= prompt("Introduce el numero de noches que estará fuera: ");
+        const destino = prompt("Introduce el destino: oviedo,tokyo,madrid,barcelona");
+        
+
+        const costeHotel = (NumNoches)=>{
+            NumNoches*140;
+               console.log(NumNoches) 
+        }
+
+        //crear funciones
+        const costeAvion = (destino,noches) =>{
+            let costes;
+            if(destino === 'Oviedo'){
+                costes =15;
+            }else if(destino === 'Tokyo'){
+                costes = 700;
+            }else if(destino ==='Madrid' || destino ==='Barcelona'){
+                costes =90;
+            }
+
+            if(NumNoches > 3){
+                costes *= 0.9;
+            }
+            return costes;
+        }
+
+const costeAlquilerCoche = (NumNoches) =>{
+    let costes = NumNoches*140;
+    if(NumNoches >=7){
+        costes -=50;
+    }else if(NumNoches >=3){
+        costes -=20;
+
+    }
+    return costes;
+}
+
+const resultado1 = Number(costeHotel(NumNoches));
+const resultado2 = Number(costeAvion(destino,NumNoches));
+const resultado3 = Number(costeAlquilerCoche(NumNoches));
+console.log('el coste del hotel es: ',resultado1);
+console.log('el coste del avion: ',resultado2);
+console.log('el coste del alquiler del coche es: ',resultado3);
+
+
+</script>
+</body>
+</html>

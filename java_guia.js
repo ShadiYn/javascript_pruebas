@@ -128,3 +128,7 @@ console.log(devuelveValor2)
     const suma1 = (x,y)=> x*y; //esto estaria totalmente correcto es decir, la funcion devuelve x*y
     const valor3 = suma1(2,5);
     console.log(valor3);
+
+    //Math random javascript
+    Math.floor(Math.random()* (Max-Min +1))+Min;
+    

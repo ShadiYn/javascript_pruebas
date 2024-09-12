@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pruebas?</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let n1 = (prompt("Introduce el primer numero"));
+        const n =parseInt(n1);
+        let n2 = (prompt("introduce el segundo numero"));
+        const nn = parseInt(n2)
+        const operador= prompt("Introduce la operacion que quieras realizar (+,-,*,/)")
+        
+        switch(operador){
+            case '+':
+                    let suma = n + nn;
+                    console.log(suma);
+                break;
+
+            case '-':
+                let resta = n-nn;
+                console.log(resta)
+                break;
+            case '/':
+                if(nn ==0){
+                    console.log('No se pueden dividir numeros por 0');
+                }else{
+                    const dividir = n/nn;
+                    console.log(dividir);
+                }
+                break;
+            case '*':
+                const multiplicar = n*nn;
+                    console.log(multiplicar);
+                break;
+
+        }
+
+    </script>
+</body>
+</html>
