@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label>Nombre del cliente: </label><br>
+    <input id="nombre"><br> <br>
+    <label>Material de la caja: </label><br>
+    <select>
+        <option>Metal</option>
+        <option>Plástico</option>
+        <option>Madera</option>
+
+    </select>
+    <br> 
+    <br>
+    <br>
+    <label> Selecciona las dimensiones para la caja: </label><br>
+    <input type="radio" name="boxSize" id="diminutas" value="diminutas"><label for="diminuta">Diminuta</label><br />
+    <input type="radio" name="boxSize" id="Mediana" value="Mediana"><label for="boxSize2">Mediana</label><br />
+    <input type="radio" name="boxSize" id="Grande" value="Grande"><label for="boxSize3">Grande</label>
+
+    <br>
+    <br>
+    <label>Comentarios: </label><br> <br>
+    <textarea>
+
+    </textarea>
+    <br>
+    <br>
+    <button id ="button">Enviar</button>
+    <br>
+    <br>
+    <input width="600px">
+
+
+
+
+
+
+    <script>
+
+    const mostrarFrase = ()=>{
+        const nombre = document.querySelector("#nombre").value;
+        console.log(nombre);
+
+    }        
+
+
+
+    document.querySelector("#button").addEventListener('click',mostrarFrase)
+
+
+    </script>
+</body>
+</html>
