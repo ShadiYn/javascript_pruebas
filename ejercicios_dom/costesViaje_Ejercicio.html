@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular costes de viaje</title>
+</head>
+<body>
+    <label>Introduce el numero de noches: </label>
+        <input id="numNoches"><br>
+    <label>Introduce la ciudad destino</label>
+    <select id="ciudadDestino">
+        <option value="Oviedo">Oviedo</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Barcelona">Barcelona</option>
+    </select>
+   
+    <br> <br>
+    <button id="calcular">Calcular Costes</button>
+    <br>
+    <p>__________________________________________________________</p>
+    <br>
+
+    <label>Coste Hotel:</label>
+         <input id="resultadoHotel"><br>
+   <label>Coste viaje</label>
+         <input id="resultadoAvion"><br>
+    <label>Coste Alquiler coche</label>
+         <input id="resultadoAlquilerCoche"><br>
+    <label>Coste total</label>
+        <input id="costeTotal">
+
+
+    <script>
+
+        const CosteHotel = (nNoches)=>{
+         nNoches= document.querySelector('#numNoches').value;
+            //cada noche cuesta 140€
+
+
+             const destino = document.querySelector('#ciudadDestino').value;
+            const noches = nNoches*140;
+            const costesAvion = costeAvion(destino,nNoches);
+            const costesAlquiler = cocheAlquiler(nNoches);
+
+            document.querySelector('#resultadoHotel').value=noches;
+            document.querySelector('#resultadoAvion').value=costesAvion;
+            document.querySelector('#resultadoAlquilerCoche').value=costesAlquiler;
+            document.querySelector('#costeTotal').value=noches+costesAvion+costesAlquiler;
+        }
+
+        const costeAvion = (destino,nNoches)=>{
+            if(destino == 'Oviedo'){
+                console.log(destino);
+                return 15;
+            }else if(destino == 'Barcelona'){
+                return 90;
+            }else if(destino =='Madrid'){
+                return 90;
+            }else if(destino == 'Tokyo'){
+                return 700;
+            }
+
+        }
+
+        const cocheAlquiler = (nNoches)=>{
+            //cada dia de alquiler cuesta 40€
+            const coste = nNoches*40;
+            if(nNoches>=3 ){
+                coste*40;
+                return coste;
+            }else if(nNoches >=7){
+                coste*40-50;
+                return coste;
+
+            }else{
+                coste*40;
+                return coste;
+
+            }
+
+        }
+
+        document.querySelector('#calcular').addEventListener('click',CosteHotel);
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
