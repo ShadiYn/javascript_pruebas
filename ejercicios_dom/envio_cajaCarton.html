@@ -10,10 +10,10 @@
     <label>Nombre del cliente: </label><br>
     <input id="nombre"><br> <br>
     <label>Material de la caja: </label><br>
-    <select>
-        <option>Metal</option>
-        <option>Plástico</option>
-        <option>Madera</option>
+    <select id="materialCaja">
+        <option value="metal">Metal</option>
+        <option value="plastico">Plástico</option>
+        <option value="madera">Madera</option>
 
     </select>
     <br> 
@@ -26,8 +26,8 @@
 
     <br>
     <br>
-    <label>Comentarios: </label><br> <br>
-    <textarea>
+    <label for="comentarios">Comentarios: </label><br> <br>
+    <textarea id="comentarios">
 
     </textarea>
     <br>
@@ -35,7 +35,7 @@
     <button id ="button">Enviar</button>
     <br>
     <br>
-    <input width="600px">
+    <input width="600px" id="resultado">
 
 
 
@@ -46,7 +46,14 @@
 
     const mostrarFrase = ()=>{
         const nombre = document.querySelector("#nombre").value;
-        console.log(nombre);
+        const material = document.querySelector('#materialCaja').value;
+        const tamanoCaja = document.querySelector('input[name="boxSize"]:checked').value;
+        const comments = document.querySelector('#comentarios').value; //lef faltava el puñetero .value de los cojones xddd
+        console.log(comments);
+        const mensaje = `${nombre} ha pedido una caja de ${material} con unas dimensiones ${tamanoCaja} y el mensaje: ${comments}`;
+
+        console.log(mensaje);
+        document.querySelector('#resultado').value=mensaje;
 
     }        
 
