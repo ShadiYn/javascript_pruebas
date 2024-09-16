@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con html y divs y cosas asi similares creo</title>
+</head>
+<body>
+    <h1>Ejercicio 2 contador palabras</h1>
+
+    <label>Introduce un numero: </label><br><br>
+    <input id="numero">
+    <div id="numPalabras">
+
+    </div>
+    <br><br>
+    <h1>Ejercicio 1 mouse over</h1>
+
+    <div id="capa1" style="background-color:red; width:200px; height:200px">
+    </div>
+
+    <div id="capa2" style="background-color:yellow; width:200px; height:200px">
+
+    </div>
+
+    <div class="mapa">
+        <img src="C:\Users\Tarda.DESKTOP-NJ04ELD\Documents\javascript\ejercicios_dom\moneda.png" style="width:50px;position:absolute; margin-left:577px; margin-top:75px">
+    </div>
+
+
+<script>
+    //ejercicio1
+    const cambiarContenido1 = ()=>{
+        document.querySelector('#capa2').innerHTML = "<h1 type=>CAGASTE</h1>"
+    }
+    document.querySelector('#capa1').addEventListener('mouseover',cambiarContenido1);
+
+
+
+    //ejercicio 2
+    const addParagraph = () => {
+    console.log('111111111111')
+    const number = document.querySelector('#numero').value;
+    let code=''
+    for (let i = 0; i < number; i++) {
+        code += 'Cositas guays';
+    }
+    document.querySelector('#numPalabras').innerHTML =code;
+
+
+}
+
+document.querySelector('#numero').addEventListener('input', addParagraph);
+
+
+//ejercicio 3 y ultimo: imprimir imagenes random por la pantalla
+const randomImagenes = ()=>{
+    const codigo ='';
+    for(let i =0; i<10;i++){
+        const x = Math.floor(Math.random()*725);
+        const y = Math.floor(Math.random()*483);
+        codigo +='<img src="C:\Users\Tarda.DESKTOP-NJ04ELD\Documents\javascript\ejercicios_dom\moneda.png" style="width:50px;position:absolute; margin-left:577px;'+x+' margin-top:75px">'+y;
+     }
+}
+document.querySelector('.mapa').innerHTML = code;
+</script>
+
+</body>
+</html>

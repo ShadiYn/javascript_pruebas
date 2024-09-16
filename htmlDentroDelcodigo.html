@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pp" style="background-color:yellow; width:200px; height:200px">
+        <input type="button" id="btn"/>
+    </div>
+    
+    <script>
+        const anadeHTML = () =>{
+            document.querySelector("#pp").innerHTML="<h1>Casita</h1>";
+        }
+        document.querySelector('#btn').addEventListener('click', anadeHTML)
+    </script>
+</body>
+</html>
