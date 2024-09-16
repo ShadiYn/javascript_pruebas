@@ -1,0 +1,29 @@
+.slide {
+    width: 512px;
+    height: 512px;
+  }
+  
+  
+  .num1 {
+    background-image: url(../Ejercicio_slider/PinguLinux_Batman.png);
+  }
+  
+  .num2 {
+    background-image: url(../Ejercicio_slider/PinguLinux_Batman.png);
+  }
+  
+  .num3 {
+    background-image: url(../Ejercicio_slider/PinguLinux_Batman.png);
+  }
+  
+  .slider {
+    display: flex;
+    width: 1536px;
+    transition: 1s;
+  }
+  
+  .sliderContainer {
+    width: 512px;
+    height: 512px;
+    overflow: hidden;
+  }

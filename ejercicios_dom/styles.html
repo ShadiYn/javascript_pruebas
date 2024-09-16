@@ -13,6 +13,16 @@
         <span class="respuesta3">C++</span>??
     </p>
 
+    <select id="options">
+        <option vlue="-1">Seleccion un color</option>
+        <option value="green">Verde</option>
+        <option value="pink">Rosa</option>
+        
+    </select>
+
+
+
+
 <button>Respuesta</button>
 
     <script>
@@ -24,8 +34,15 @@
             document.querySelector(".respuesta3").style.backgroundColor='green';
         }
 
+        const cambiarFondo =()=>{
+            const color = e.target.value;
+            document.querySelector('body').style.backgroundColor = color;
+
+
+        }
+
         document.querySelector("button").addEventListener("click",respuestaCorrecta);
-    
+
 
 
 

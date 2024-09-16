@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select id="color">
+        <option vlue="1">Seleccion un color</option>
+        <option value="lightgreen">Verde</option>
+        <option value="pink">Rosa</option>
+        <option value="violet">Violeta</option>
+        <option value="lightblue">azul</option>
+
+        
+    </select>
+
+
+
+
+
+    <script>
+
+
+        const cambiarFondo = (e)=>{
+            const color = e.target.value;
+            document.querySelector('body').style.backgroundColor = color;
+
+
+        }
+                //RECORDAR PONER SIEMPRE EL PUÑETERO HASTAGH
+        document.querySelector("#color").addEventListener("change",cambiarFondo);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
