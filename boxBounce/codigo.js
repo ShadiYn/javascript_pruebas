@@ -4,6 +4,8 @@ const box = document.querySelector('.box');
 
 
 
+
+
 const animate = () => {
     box.classList.add('animate__animated', 'animate__bounce');
 }
