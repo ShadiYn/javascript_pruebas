@@ -1,0 +1,21 @@
+.hamburguer {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(165, 179, 223);
+    cursor: pointer;
+}
+
+.panel {
+    background-color: rgb(234, 173, 204);
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    transition: 0.8s;
+}
+
+.panel.active {
+    right: 0;
+    background-color: rgb(234, 173, 204);
+}
